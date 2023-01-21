@@ -11,7 +11,6 @@ import Result from "./components/Result";
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [city, setCity] = useState("New York");
-  // const [loadingStatus, setLoadingStatus] = useState(true);
   const [units, setUnits] = useState("metric");
 
   const { isLoading, fetchData: fetchWeather } = useFetch(true);
