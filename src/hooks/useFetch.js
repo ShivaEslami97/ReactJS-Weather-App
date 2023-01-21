@@ -25,7 +25,6 @@ const useFetch = (initialLoading = false) => {
     }
     setIsLoading(false);
   }, []);
-  console.log(isLoading);
   return { isLoading, fetchData };
 };
 
