@@ -3,7 +3,6 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { getTime } from "../services/services";
 
 const TimeAndLocation = ({ data }) => {
-  console.log(data);
   const { todayDate, currTime } = getTime(data.timezone);
   const { temp_max: tempMax, temp_min: tempMin } = data.main;
   return (
