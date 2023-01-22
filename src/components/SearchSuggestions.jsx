@@ -4,7 +4,6 @@ const SearchSuggestions = memo(function SearchSuggestions({
   cityOptions,
   onCityChange,
 }) {
-  console.log(cityOptions);
   const options = cityOptions.options;
   const notFound = <p>City not Found</p>;
 
