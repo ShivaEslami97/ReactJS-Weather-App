@@ -74,7 +74,7 @@ const Search = ({ units, setUnits, onCityChange }) => {
             onBlur={() => {
               setTimeout(() => {
                 setSuggestion(null);
-              }, 100);
+              }, 200);
             }}
           />
           {isLoading && <LoadingSpinner />}

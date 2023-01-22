@@ -4,7 +4,7 @@ const TopButtons = ({ onCityChange }) => {
   const cities = [
     {
       id: 1,
-      title: "Tabriz",
+      title: "Istanbul",
     },
     {
       id: 2,
