@@ -5,6 +5,7 @@ import { getTime } from "../services/services";
 const TimeAndLocation = ({ data }) => {
   const { todayDate, currTime } = getTime(data.timezone);
   const { temp_max: tempMax, temp_min: tempMin } = data.main;
+
   return (
     <div className="flex flex-col my-6">
       <div className="flex items-center justify-center my-3">
@@ -12,7 +13,7 @@ const TimeAndLocation = ({ data }) => {
           {`${data.name}, ${data.sys.country}`}
         </p>
       </div>
-      <p className="text-white text-xl font-extralight">
+      <p className="text-white text-xl text-center font-extralight">
         {`${todayDate} | local time: ${currTime} `}
       </p>
       <div className="flex flex-row items-center justify-center space-x-2 text-white py-3">

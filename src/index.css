@@ -31,8 +31,8 @@
 .sidebar {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* background-color: rgba(5, 5, 8, 0.5); */
-  background-color: rgba(9, 28, 21, 0.65);
+  background-color: rgba(5, 5, 8, 0.68);
+  /* background-color: rgba(9, 28, 21, 0.65); */
 }
 .suggestionsBox {
   background-blend-mode: overlay;

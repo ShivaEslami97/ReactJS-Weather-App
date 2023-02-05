@@ -17,6 +17,7 @@ const useFetch = (initialLoading = false) => {
       }
 
       const data = await response.json();
+      console.log(data);
       applyData(data);
     } catch (error) {
       toast.error(error.message || "Something went wrong!");

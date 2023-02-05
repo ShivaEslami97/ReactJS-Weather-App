@@ -53,6 +53,7 @@ const Search = ({ units, setUnits, onCityChange }) => {
       onCityChange(val);
       setSuggestion(null);
       setSearchData(val);
+      console.log(val);
     },
     [onCityChange]
   );
@@ -68,7 +69,7 @@ const Search = ({ units, setUnits, onCityChange }) => {
           <input
             type="text"
             className="input-control"
-            placeholder="Search..."
+            placeholder="Enter a city name..."
             value={searchData}
             onChange={handleOnChange}
             onBlur={() => {
