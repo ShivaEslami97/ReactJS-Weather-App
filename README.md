@@ -10,6 +10,8 @@ Made using React built-in hooks (useState, useEffect, useCallback) and React cus
 
 You can see the demo [here](https://shiva-ese-reactjs-weather-app.netlify.app/) 👈👈
 
+## Screenshots
+
 ## Features
 
 ◼️ Celcius to Fahrenheit conversion and vice versa\
