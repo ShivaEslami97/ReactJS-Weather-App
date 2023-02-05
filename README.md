@@ -1,3 +1,18 @@
+# Weather App
+
+A simple weather app in react js using Open Weather API. Weather can be searched by entering city in the search bar.
+
+Made using React built-in hooks (useState, useEffect, useCallback) and React custom hook and (Maybe unnecessary for a small app like this, but it was for learning purpose).
+
+## Features
+
+- Celcius to Fahrenheit conversion and vice versa
+- Displays present weather conditions of the searched city.
+- Search cities worldwide.
+- Dynamic weather background videos for each weather condition.
+- Display current weather details like temperature, humidity, wind speed, and pressure of the searched city.
+- Display the current time of the searched city.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
