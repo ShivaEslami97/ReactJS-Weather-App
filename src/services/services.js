@@ -43,16 +43,16 @@ const getWeatherCondition = (value, hours) => {
 const selectBackgroundVideoLink = (weatherCondition) => {
   const videoLinks = {
     ClearDay:
-      "https://player.vimeo.com/external/369995583.hd.mp4?s=a220354b4b2e1a9a46981b835ec9c6f1483650d0&profile_id=175&oauth2_token_id=57447761",
+      "https://player.vimeo.com/external/369995583.sd.mp4?s=5afa28a551b1b1231d4f1a67b6136a1d2909f517&profile_id=165&oauth2_token_id=57447761",
     ClearNight:
-      "https://player.vimeo.com/external/450389043.hd.mp4?s=12e8be146276746d5bc71de2bffed819b9e92e1c&profile_id=175&oauth2_token_id=57447761",
+      "https://player.vimeo.com/external/450389043.sd.mp4?s=b3ef9046f72679d31ec7744cc06d388dd351952d&profile_id=165&oauth2_token_id=57447761",
     Clouds:
-      "https://player.vimeo.com/external/330241014.hd.mp4?s=bbce699075d5d1b9fb77e8aee9e51b44d9c9c9dd&profile_id=175&oauth2_token_id=57447761",
-    Mist: "https://player.vimeo.com/external/343732132.hd.mp4?s=5bfde23f17e3858dbdc140afe7a35b6a9ef1127d&profile_id=175&oauth2_token_id=57447761",
-    Rain: "https://player.vimeo.com/external/314009652.hd.mp4?s=d7e1b097c3e07f9af480f2d1045f6961e41e6a32&profile_id=175&oauth2_token_id=57447761",
-    Snow: "https://player.vimeo.com/external/314535013.hd.mp4?s=8723bedfe82aae3a25bc98e435ff119b1ea79a56&profile_id=175&oauth2_token_id=57447761",
+      "https://player.vimeo.com/external/330241014.sd.mp4?s=062c0b46884fc98d7468a1c448568785862cd826&profile_id=165&oauth2_token_id=57447761",
+    Mist: "https://player.vimeo.com/external/343732132.sd.mp4?s=e929998750867170d3fd43ec6c80abc45238896d&profile_id=164&oauth2_token_id=57447761",
+    Rain: "https://player.vimeo.com/external/314009652.sd.mp4?s=122c882377bf9f385cc3092e74a878abd1485423&profile_id=165&oauth2_token_id=57447761",
+    Snow: "https://player.vimeo.com/external/314535013.sd.mp4?s=79ed75ccc803c2ac6e1cc09280c37a44b87d1d84&profile_id=165&oauth2_token_id=57447761",
     Thunderstorm:
-      "https://player.vimeo.com/external/480223896.hd.mp4?s=e4b94f0b5700bfa68cb6f02b41f94ecca91242e9&profile_id=169&oauth2_token_id=57447761",
+      "https://player.vimeo.com/external/480223896.sd.mp4?s=4322c1e7b0c2863237d0ba6bdba8d92c387e1981&profile_id=164&oauth2_token_id=57447761",
   };
   return videoLinks[weatherCondition];
 };
