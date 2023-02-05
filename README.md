@@ -1,18 +1,24 @@
-# Weather App
+# 🌦 Weather App
+
+Redesigned of [dribbble design](https://dribbble.com/shots/7118235-Weather-DailyUI-037)
 
 A simple weather app in react js using the OpenWeatherMap API and GeoDB API with places autocomplete. Weather can be searched by entering city in the search bar.
 
 Made using React built-in hooks (useState, useEffect, useCallback) and React custom hook (Maybe unnecessary for a small app like this, but it was for learning purpose).
 
+## Demo
+
+You can see the demo [here](https://shiva-ese-reactjs-weather-app.netlify.app/) 👈👈
+
 ## Features
 
-- Celcius to Fahrenheit conversion and vice versa
-- Displays present weather conditions of the searched city.
-- Shows a list of city Suggestions after you enter a name in the search bar.
-- Search cities worldwide.
-- Dynamic weather background videos for each weather condition.
-- Display current weather details like temperature, humidity, wind speed, and pressure of the searched city.
-- Display the current time of the searched city.
+◼️ Celcius to Fahrenheit conversion and vice versa\
+◼️ Displays present weather conditions of the searched city.\
+◼️ Shows a list of city Suggestions after you enter a name in the search bar.\
+◼️ Search cities worldwide.\
+◼️ Dynamic weather background videos for each weather condition.\
+◼️ Display current weather details like temperature, humidity, wind speed, and pressure of the searched city.\
+◼️ Display the current time of the searched city.
 
 ## Environment Variables
 
@@ -24,6 +30,16 @@ Create a file called .env in the root of the React Weather App project. Add the 
 `REACT_APP_RapidAPI_Key = <Your GeoDB API key>` for GeoDB API.
 
 - I used Pexels API for Background Video links (https://www.pexels.com/api/).
+
+## 🚀 Technologies Used
+
+**ReactJS,** **TailwindCSS**
+
+## 🤝 Support
+
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
 
 # Getting Started with Create React App
 
