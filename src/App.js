@@ -47,7 +47,11 @@ function App() {
   return (
     <Fragment>
       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
-      <main className="app bg-cover grid grid-cols-[1fr] md:grid-cols-[2fr,_1fr]">
+      <main
+        className={`app ${
+          !currentWeather && "bg-main"
+        } bg-cover grid grid-cols-[1fr] md:grid-cols-[2fr,_1fr]`}
+      >
         {background && (
           <div className="video-container">
             <video autoPlay loop muted id="video">
