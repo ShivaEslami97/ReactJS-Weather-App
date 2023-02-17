@@ -25,12 +25,14 @@ function App() {
   useEffect(() => {
     const weatherData = (data) => {
       setCurrentWeather({ ...data });
+      // get location time for setting dynamic background based on day/night
       const { hour } = getTime(data.timezone);
+      // get weatherCondition for setting dynamic video backgrounds
       const weatherCondition = getWeatherCondition(data.weather[0].main, hour);
       const backgroundVideo = selectBackgroundVideoLink(weatherCondition);
       setBackground(backgroundVideo);
     };
-
+    // fetch weather data from openweathermap api
     fetchWeather(
       { url: `${BASE_URL}weather?q=${city}&appid=${API_KEY}&units=${units}` },
       weatherData
