@@ -5,6 +5,7 @@ const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 const GEO_API_KEY = process.env.REACT_APP_RapidAPI_Key;
 const GEO_API_URL = "https://wft-geo-db.p.rapidapi.com/v1/geo";
 
+// get local time of searched city
 const getTime = (timezone) => {
   const timezoneInMinutes = timezone / 60;
   const currTime = moment().utcOffset(timezoneInMinutes).format("HH:mm");
@@ -20,6 +21,7 @@ const geoApiOptions = {
   },
 };
 
+// a list of possible weather conditions based on api doc.
 const getWeatherCondition = (value, hours) => {
   const mistCondition = [
     "Mist",
@@ -40,6 +42,7 @@ const getWeatherCondition = (value, hours) => {
   return isDayTime;
 };
 
+// background video links from pexels api for different weather conditions
 const selectBackgroundVideoLink = (weatherCondition) => {
   const videoLinks = {
     ClearDay:
