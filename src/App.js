@@ -32,6 +32,7 @@ function App() {
       const backgroundVideo = selectBackgroundVideoLink(weatherCondition);
       setBackground(backgroundVideo);
     };
+
     // fetch weather data from openweathermap api
     fetchWeather(
       { url: `${BASE_URL}weather?q=${city}&appid=${API_KEY}&units=${units}` },
