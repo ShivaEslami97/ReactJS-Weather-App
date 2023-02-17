@@ -24,7 +24,7 @@ const Search = ({ units, setUnits, onCityChange }) => {
       };
       setSuggestion({ ...loadedCities });
     };
-
+    // start searching (fetching data) when user stops typing
     const debouncer = setTimeout(() => {
       if (searchData.trim() !== "") {
         fetchData(
@@ -39,8 +39,8 @@ const Search = ({ units, setUnits, onCityChange }) => {
         );
       }
     }, 1500);
+
     return () => {
-      console.log("re-render");
       clearTimeout(debouncer);
     };
   }, [fetchData, searchData]);
@@ -57,6 +57,7 @@ const Search = ({ units, setUnits, onCityChange }) => {
     },
     [onCityChange]
   );
+  // weather unit change
   const handleUnitsChange = (e) => {
     const selectedUnit = e.currentTarget.name;
     if (units !== selectedUnit) setUnits(selectedUnit);
