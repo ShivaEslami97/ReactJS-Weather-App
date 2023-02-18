@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
-import Loading from "./components/Loading/Loading";
 import Sidebar from "./components/Sidebar";
 import { ToastContainer } from "react-toastify";
+import useFetch from "./hooks/useFetch";
+import Result from "./components/Result";
 import {
   API_KEY,
   BASE_URL,
@@ -11,21 +12,18 @@ import {
   getWeatherCondition,
   selectBackgroundVideoLink,
 } from "./services/services";
-import useFetch from "./hooks/useFetch";
-import Result from "./components/Result";
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [city, setCity] = useState("New York");
   const [units, setUnits] = useState("metric");
   const [background, setBackground] = useState(null);
-
   const { isLoading, fetchData: fetchWeather } = useFetch(true);
 
   useEffect(() => {
     const weatherData = (data) => {
       setCurrentWeather({ ...data });
-      // get location time for setting dynamic background based on day/night
+      // get time based on searched location for setting dynamic background based on day/night
       const { hour } = getTime(data.timezone);
       // get weatherCondition for setting dynamic video backgrounds
       const weatherCondition = getWeatherCondition(data.weather[0].main, hour);
@@ -40,13 +38,6 @@ function App() {
     );
   }, [city, fetchWeather, units]);
 
-  if (isLoading) {
-    return (
-      <main className="app app-loading bg-main h-screen">
-        <Loading />
-      </main>
-    );
-  }
   return (
     <Fragment>
       <ToastContainer autoClose={5000} theme="colored" newestOnTop={true} />
@@ -63,7 +54,7 @@ function App() {
           </div>
         )}
 
-        <Result data={currentWeather} />
+        <Result data={currentWeather} isLoading={isLoading} />
         <Sidebar
           data={currentWeather}
           units={units}
